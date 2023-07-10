@@ -1,0 +1,8 @@
+require("plugins")
+require("colors")
+require("treesitter")
+require("lsp")
+require("keymap")
+require("nvimtree")
+require("config")
+require("blankline")
