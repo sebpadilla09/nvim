@@ -1,5 +1,4 @@
 local builtin = require("telescope.builtin")
-local opts = { noremap = true, silent = true }
 
 --INFO: Se usa para poner una tecla principal
 --para comandos
@@ -25,3 +24,8 @@ vim.keymap.set("n", "<leader>ft", ":TodoTelescope<return>")
 
 -- Terminal
 vim.keymap.set("n", "<leader>t", ":ToggleTerm<return>")
+
+-- jester
+
+vim.keymap.set("n", "<leader>rt", ":lua require'jester'.run({ dap = { console = 'externalTerminal' } }) <return>")
+vim.keymap.set("n", "<leader>rtf", ":lua require'jester'.run_file({ dap = {console = 'externalTeminal' } }) <return>")

@@ -40,18 +40,11 @@ return require("packer").startup(function(use)
 
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		tag = "0.1.5",
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
-	use({
-		-- Add indentation guides even on blank lines
-		"lukas-reineke/indent-blankline.nvim",
-		opts = {
-			char = "|",
-			show_trailing_blankline_indent = false,
-		},
-	})
+	use("lukas-reineke/indent-blankline.nvim")
 	use({
 		-- Set lualine as statusline
 		"nvim-lualine/lualine.nvim",
@@ -86,4 +79,12 @@ return require("packer").startup(function(use)
 		requires = { "nvim-lua/plenary.nvim" },
 	})
 	use("github/copilot.vim")
+	use("David-Kunz/jester")
+	use({
+		"anuvyklack/windows.nvim",
+		requires = "anuvyklack/middleclass",
+		config = function()
+			require("windows").setup()
+		end,
+	})
 end)

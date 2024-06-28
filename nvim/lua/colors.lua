@@ -1,6 +1,6 @@
-function useColorScheme(color)
+function UseColorScheme(color)
 	color = color or "catppuccin"
 	vim.cmd.colorscheme(color)
 end
 
-useColorScheme()
+UseColorScheme()
